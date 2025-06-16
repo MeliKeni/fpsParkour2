@@ -1180,6 +1180,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1314871400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1314871402}
+  - component: {fileID: 1314871401}
+  m_Layer: 0
+  m_Name: MoneyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1314871401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314871400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5527e813a8d587345b2dbaea4c714a5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 100
+  uiManager: {fileID: 1275870578}
+--- !u!4 &1314871402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314871400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8381767, y: 1.0256405, z: -1.1142025}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1647361790 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4472917377128280467, guid: 033e675030c1fe0429646952387a5572,
@@ -1198,7 +1243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fba1bb6aea79f14894c11b4f7f58047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 19
+  cost: 20
   moneyManager: {fileID: 0}
 --- !u!1 &1649330464
 GameObject:
