@@ -2,29 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
+    private Vector3 lastCheckpointPosition;
+
+    void Start()
+    {
+        lastCheckpointPosition = transform.position; // posición inicial por si no tocó ningún checkpoint aún
+    }
+
     void Update()
     {
-        // Si el jugador cae por debajo de Y = -30
-        if (transform.position.y < -30f)
+        if (transform.position.y < -30)
         {
-            Respawn();
+            transform.position = lastCheckpointPosition;
+            Debug.Log("Jugador respawneado en: " + lastCheckpointPosition);
         }
     }
 
-    void Respawn()
+    public void UpdateCheckpoint(Vector3 newCheckpoint)
     {
-        // Teletransporta al jugador a la posición guardada en Checkpoint
-        transform.position = CheckpointTrigger.currentCheckpointPosition;
-        Debug.Log("Jugador reapareció en checkpoint.");
-        
-        // Opcional: si tienes Rigidbody, resetear velocidad
-        Rigidbody rb = GetComponent<Rigidbody>();
-        if(rb != null)
-        {
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-        }
+        lastCheckpointPosition = newCheckpoint;
+        Debug.Log("Checkpoint actualizado en el jugador: " + lastCheckpointPosition);
     }
 }
